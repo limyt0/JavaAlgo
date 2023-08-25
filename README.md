@@ -22,6 +22,9 @@
 
 27. 미로탐색: https://www.acmicpc.net/problem/2178
 
+28. 트리의 지름: https://www.acmicpc.net/problem/1167
+
+
 ## 트리
 
 ## 조합
