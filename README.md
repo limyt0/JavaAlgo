@@ -25,6 +25,7 @@
 ### 05-3이진 탐색
 29. 수 찾기: https://www.acmicpc.net/problem/1920
 
+30. 기타 레슨: https://www.acmicpc.net/problem/2343
 
 ## 06 트리
 
