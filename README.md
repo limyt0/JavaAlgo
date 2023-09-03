@@ -40,6 +40,8 @@
 
 35. 회의실 배정: https://www.acmicpc.net/problem/1931
 
+36. 잃어버린 괄호: https://www.acmicpc.net/problem/1541
+
 ## 07 정수론
 
 ## 08 그래프
