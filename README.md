@@ -38,6 +38,8 @@
 
 34. 수 묶기: https://www.acmicpc.net/problem/1744
 
+35. 회의실 배정: https://www.acmicpc.net/problem/1931
+
 ## 07 정수론
 
 ## 08 그래프
