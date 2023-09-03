@@ -30,6 +30,11 @@
 31. K번째 수: https://www.acmicpc.net/problem/1300
 
 ## 06 그리디
+### 06-1 그리디 알고리즘
+
+32. 동전 0: https://www.acmicpc.net/problem/11047
+
+33. 
 
 ## 07 정수론
 
