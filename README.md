@@ -36,6 +36,8 @@
 
 33. 카드 정렬하기: https://www.acmicpc.net/problem/1715
 
+34. 수 묶기: https://www.acmicpc.net/problem/1744
+
 ## 07 정수론
 
 ## 08 그래프
