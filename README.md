@@ -43,6 +43,8 @@
 36. 잃어버린 괄호: https://www.acmicpc.net/problem/1541
 
 ## 07 정수론
+### 07-1 소수 구하기
+37. 소수 구하기: https://www.acmicpc.net/problem/1929
 
 ## 08 그래프
 
