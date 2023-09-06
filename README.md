@@ -46,6 +46,10 @@
 ### 07-1 소수 구하기
 37. 소수 구하기: https://www.acmicpc.net/problem/1929
 
+38. 거의 소수: https://www.acmicpc.net/problem/1456
+
+39. 
+
 ## 08 그래프
 
 ## 09 트리
