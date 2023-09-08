@@ -1,7 +1,6 @@
 package a07;
 
 import java.util.*;
-//답 체크 및 수정필요
 public class a07정수론38_p1456거의소수 {
 
 	public static void main(String[] args) {
