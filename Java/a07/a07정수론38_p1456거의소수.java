@@ -2,7 +2,6 @@ package a07;
 
 import java.util.*;
 public class a07정수론38_p1456거의소수 {
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		long Min = sc.nextLong();
