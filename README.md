@@ -48,7 +48,7 @@
 
 38. 거의 소수: https://www.acmicpc.net/problem/1456
 
-39. 
+39. 소수&팰린드롬: https://www.acmicpc.net/problem/1747
 
 ## 08 그래프
 
