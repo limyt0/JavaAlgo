@@ -50,6 +50,8 @@
 
 39. 소수&팰린드롬: https://www.acmicpc.net/problem/1747
 
+40. 제곱 ㄴㄴ 수: https://www.acmicpc.net/problem/1016
+
 ## 08 그래프
 
 ## 09 트리
