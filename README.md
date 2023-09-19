@@ -52,6 +52,10 @@
 
 40. 제곱 ㄴㄴ 수: https://www.acmicpc.net/problem/1016
 
+### 07-2 오일러 피
+
+41. GCD(n, k) = 1: https://www.acmicpc.net/problem/11689
+
 ## 08 그래프
 
 ## 09 트리
