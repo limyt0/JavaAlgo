@@ -22,7 +22,6 @@ public class a07정수론41_p11689GCDNK1 {
 			result = result - result /n;
 		}
 		System.out.println(result);
-		
 	}
 
 }
