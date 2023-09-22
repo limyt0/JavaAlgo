@@ -42,7 +42,6 @@ public class a5탐색27_p2178미로탐색 {
 						queue.add(new int[] {x,y});
 					}
 				}
-				
 			}
 		}
 	}
