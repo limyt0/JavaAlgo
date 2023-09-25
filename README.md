@@ -56,6 +56,8 @@
 
 41. GCD(n, k) = 1: https://www.acmicpc.net/problem/11689
 
+42. 최소 공배수: https://www.acmicpc.net/problem/1934
+
 ## 08 그래프
 
 ## 09 트리
