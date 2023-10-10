@@ -1,5 +1,4 @@
 package a07;
-
 import java.util.*;
 
 public class a07정수론40_p1016제곱ㄴㄴ수 {
