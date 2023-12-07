@@ -4,12 +4,30 @@
 ## 01 정렬
 00. 수 정렬하기 : https://www.acmicpc.net/problem/2750
 
-01. 숫자의 합 구하기: https://www.acmicpc.net/problem/11720
-
-
 ## 02 탐색
 
 ## 03 그리디
+01. 숫자의 합 구하기: https://www.acmicpc.net/problem/11720
+
+02. 평균: https://www.acmicpc.net/problem/1546
+
+03. 구간 합 구하기 4: https://www.acmicpc.net/problem/11659
+
+04. 구간 합 구하기 5: https://www.acmicpc.net/problem/11660
+
+05. 나머지 합: https://www.acmicpc.net/problem/10986
+
+06. 수들의 합 5: https://www.acmicpc.net/problem/2018
+
+07. 주몽 : https://www.acmicpc.net/problem/1940
+
+08. 좋다: https://www.acmicpc.net/problem/1253
+
+09. DNA 비밀번호: https://www.acmicpc.net/problem/12891
+
+10. 최솟값 찾기: https://www.acmicpc.net/problem/11003
+
+11. 
 
 ## 04 정수론
 
