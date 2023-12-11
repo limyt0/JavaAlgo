@@ -6,6 +6,11 @@
 
 ## 02 탐색
 
+01. 숫자의 합 : https://www.acmicpc.net/problem/11720
+
+02. 평균: https://www.acmicpc.net/problem/1546
+
+
 ## 03 그리디
 01. 숫자의 합 구하기: https://www.acmicpc.net/problem/11720
 
