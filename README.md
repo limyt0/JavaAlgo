@@ -4,8 +4,6 @@
 ## 01 정렬
 00. 수 정렬하기 : https://www.acmicpc.net/problem/2750
 
-## 02 탐색
-
 ## 03 그리디
 01. 숫자의 합 구하기: https://www.acmicpc.net/problem/11720
 
