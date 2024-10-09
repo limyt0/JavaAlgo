@@ -79,7 +79,13 @@
 42. 최소 공배수: https://www.acmicpc.net/problem/1934
 
 43. 최대 공약수: https://www.acmicpc.net/problem/1850
+
+44. 칵테일: https://www.acmicpc.net/problem/1033
+
+45. Ax+By=C: https://www.acmicpc.net/problem/21568
 ## 08 그래프
+
+46. 
 
 ## 09 트리
 
