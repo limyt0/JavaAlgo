@@ -29,8 +29,6 @@ public class a08그래프46_p18352특정거리의도시찾기 {
 			int s = Integer.parseInt(st.nextToken());
 			int e = Integer.parseInt(st.nextToken());
 		    mlist[s].add(e);
-			//marray[0][i] = Integer.parseInt(st.nextToken());
-			//marray[1][i] = Integer.parseInt(st.nextToken());
 		}
 		nlist = new ArrayList<Integer>();
 	   lowdist(1, 0);
