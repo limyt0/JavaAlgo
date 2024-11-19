@@ -4,48 +4,48 @@ import java.io.*;
 import java.util.*;
 
 public class a5탐색24_p2023신기한소수 {
-	static int _n;
+	static int n;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		_n = Integer.parseInt(st.nextToken());
-		//DFS
-		DFS(2, 1);
-		DFS(3, 1);
-		DFS(5, 1);
-		DFS(7, 1);
+		n = Integer.parseInt(st.nextToken());
+		//첫자리는 무조건 2, 3, 5, 7
+		dfs(2, 1);
+		dfs(3, 1);
+		dfs(5, 1);
+		dfs(7, 1);
 	}
-	private static void DFS(int number, int jarisu) {
-		if(jarisu == _n) {
-			if(isPrime(number)) {
-				System.out.println(number);
+
+	private static void dfs(int num, int jarisu) {
+		if(jarisu == n) {
+			if(isPrime(num)) {				
+				System.out.println(num);
 			}
 			return;
-			
-		}
-		for(int i =1;i<10;i++) {
-			//짝수는 더이상 탐색 필요 없음.
-			if(i%2 ==0) {
-				continue;
-			}
-			//소수라면 재귀함수로 자릿수 늘림
-			if(isPrime(number*10+i)) {
-				DFS(number*10+i, jarisu+1);
-				
-			}
 		}
 		
+		for(int i =1;i<10;i+=2) {
+			
+			int newnum = num*10 + i;
+			if(isPrime(newnum)) {
+				dfs(newnum,jarisu+1);
+			}
+			
+		}
+		
+		
 	}
-	private static boolean isPrime(int num) {
-		for(int i =2; i<=num/2;i++ ) {
-			if(num%i ==0) {
+	
+	private static boolean isPrime(int num) 
+	{
+		for(int i =2;i*i<= num;i++) { // 
+			if(num % i == 0) {
+				
 				return false;
-			}			
+			}
+			
 		}
 		return true;
 	}
-	/*
-	 * private static boolean isPrime(int num) { for(int i =2; i<=num/2;i++ )
-	 * if(num%i ==0) return false; return true; }
-	 */
+	
 }
