@@ -4,65 +4,72 @@ import java.io.*;
 import java.util.*;
 
 public class a5탐색26_p1260DFS와BFS {
-	static int _n;
-	static int _m;
-	static int _start;
-	static boolean visited[];
-	static ArrayList<Integer>[] _a;
-	public static void main(String[] args) throws IOException {
+	static ArrayList<Integer>[] arr; 
+	static boolean[] visited;
+	static int n;
+	public static void main(String[] args) throws IOException   {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
+		n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+		int v = Integer.parseInt(st.nextToken());
 		
-		_n = Integer.parseInt(st.nextToken());
-		
-		_m = Integer.parseInt(st.nextToken());
-		_start = Integer.parseInt(st.nextToken());
-		_a = new ArrayList[_n+1];
-		for(int i = 1; i<=_n;i++) {
-			_a[i]= new ArrayList<Integer>();
+		arr = new ArrayList[n+1];
+		for(int i =1;i<=n;i++) {
+			arr[i] = new ArrayList<Integer>();			
 		}
-		for(int i =0;i<_m;i++) {
+		
+		for(int i = 0;i<m;i++) {
 			st = new StringTokenizer(br.readLine());
 			int s = Integer.parseInt(st.nextToken());
 			int e = Integer.parseInt(st.nextToken());
-			_a[s].add(e);
-			_a[e].add(s);
+			arr[s].add(e);
+			arr[e].add(s);
 		}
+		visited = new boolean[n+1];
+		dfs(v, 0);
+		System.out.println("");
+		visited = new boolean[n+1];
+		bfs(v, 0);
 		
-		for(int i =1;i<=_n;i++) {
-			Collections.sort(_a[i]);
+		
+	}
+	private static void dfs(int num, int cnt) {
+		if(cnt == n) 
+		{
+			return;
 		}
-		visited = new boolean[_n+1];
-		DFS(_start);
-		System.out.println();
-		visited = new boolean[_n+1];
-		BFS(_start);
-		System.out.println();
+		visited[num] = true;
+		System.out.print(num+" ");
+		for(int i=0;i< arr[num].size(); i++) {
+			int next = arr[num].get(i);
+			if(!visited[next]) {
+				dfs(next, cnt+1);
+			}
+		}			
 	}
 	
-	private static void DFS(int Node) {
-		System.out.print(Node+" ");
-		visited[Node] = true;
-		for(int i:_a[Node]) {
-			if(!visited[i]) {
-				DFS(i);
-			}
-		}	
-	}
-	private static void BFS(int Node) {
+	private static void bfs(int num, int cnt) {
 		Queue<Integer> queue = new LinkedList<Integer>();
-		queue.add(Node);
-		visited[Node] = true;
 		
+		queue.add(num);
+		visited[num] = true;
 		while(!queue.isEmpty()) {
-			int now_node = queue.poll();
-			System.out.print(now_node+ " ");
-			for(int i :_a[now_node]) {
-				if(!visited[i]) {
-					visited[i] = true;
-					queue.add(i);
+			int nowNum = queue.poll();
+			System.out.print(nowNum+" ");			
+			for(int i=0; i < arr[nowNum].size(); i++) {
+				int next = arr[num].get(i);
+				if(!visited[next]) {
+					visited[next] = true;
+					queue.add(next);
 				}
+				
 			}
+			
+			
 		}
+		
 	}
+	
+	
 }
