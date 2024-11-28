@@ -30,7 +30,26 @@ public class a5탐색26_p1260DFS와BFS {
 		dfs(v, 0);
 		System.out.println("");
 		visited = new boolean[n+1];
-		bfs(v, 0);
+		bfs(v);
+		
+		
+	}
+	private static void bfs(int num) {
+		Queue<Integer> queue = new LinkedList<Integer>();
+		queue.add(num);
+		visited[num] = true;
+		
+		while(!queue.isEmpty()) {
+			num = queue.poll();
+			System.out.print(num+" ");
+			for(int i =0;i< arr[num].size();i++) {
+				int next = arr[num].get(i);
+				if(!visited[next]) {
+					queue.add(next);
+					visited[next] = true;
+				}
+			}
+		}
 		
 		
 	}
@@ -49,27 +68,7 @@ public class a5탐색26_p1260DFS와BFS {
 		}			
 	}
 	
-	private static void bfs(int num, int cnt) {
-		Queue<Integer> queue = new LinkedList<Integer>();
-		
-		queue.add(num);
-		visited[num] = true;
-		while(!queue.isEmpty()) {
-			int nowNum = queue.poll();
-			System.out.print(nowNum+" ");			
-			for(int i=0; i < arr[nowNum].size(); i++) {
-				int next = arr[num].get(i);
-				if(!visited[next]) {
-					visited[next] = true;
-					queue.add(next);
-				}
-				
-			}
-			
-			
-		}
-		
-	}
+	
 	
 	
 }
