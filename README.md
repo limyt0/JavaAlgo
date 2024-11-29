@@ -4,7 +4,7 @@
 ## 01 정렬
 00. 수 정렬하기 : https://www.acmicpc.net/problem/2750
 
-## 03 그리디
+## 03 자료구조
 01. 숫자의 합 구하기: https://www.acmicpc.net/problem/11720
 
 02. 평균: https://www.acmicpc.net/problem/1546
