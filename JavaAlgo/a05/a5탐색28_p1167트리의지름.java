@@ -5,7 +5,7 @@ import java.util.*;
 
 public class a5탐색28_p1167트리의지름 {
 	static int n;
-	static ArrayList<Edge>[] _a;
+	static ArrayList<Edge>[] arr;
 	static boolean _visited[];
 	static int _distance[];
 	
@@ -13,9 +13,9 @@ public class a5탐색28_p1167트리의지름 {
 		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		n = Integer.parseInt(st.nextToken());
-		_a = new ArrayList[n+1];
+		arr = new ArrayList[n+1];
 		for(int i =1;i<=n;i++) {
-			_a[i] = new ArrayList<Edge>();
+			arr[i] = new ArrayList<Edge>();
 		}
 		for(int i =0;i<n;i++) {
 			st = new StringTokenizer(br.readLine());
@@ -24,7 +24,7 @@ public class a5탐색28_p1167트리의지름 {
 				int E = Integer.parseInt(st.nextToken());
 				if(E ==-1) break;
 				int V = Integer.parseInt(st.nextToken());
-				_a[S].add(new Edge(E, V));
+				arr[S].add(new Edge(E, V));
 			}
 		}
 		_distance = new int[n+1];
@@ -50,7 +50,7 @@ public class a5탐색28_p1167트리의지름 {
 		_visited[index] = true;
 		while(!queue.isEmpty()) {
 			int now_node = queue.poll();
-			for(Edge i : _a[now_node]) {
+			for(Edge i : arr[now_node]) {
 				int e = i.e;
 				int v = i.value;
 				if(!_visited[e]) {
