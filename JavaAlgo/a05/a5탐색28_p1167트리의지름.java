@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class a5탐색28_p1167트리의지름 {
+
 	static int n;
 	static ArrayList<Edge>[] arr;
 	static boolean _visited[];
@@ -27,9 +28,11 @@ public class a5탐색28_p1167트리의지름 {
 				arr[S].add(new Edge(E, V));
 			}
 		}
+		
 		_distance = new int[n+1];
 		_visited = new boolean[n+1];
 		BFS(1);
+		
 		int Max = 1;
 		for(int i =2; i<= n;i++) {
 			if(_distance[Max] < _distance[i]) {
@@ -42,9 +45,10 @@ public class a5탐색28_p1167트리의지름 {
 		Arrays.sort(_distance);
 		System.out.println(_distance[n]);
 		
+		
 	}
 	
-	private static void BFS(int index){
+	private static void BFS(int index) {
 		Queue<Integer> queue = new LinkedList<Integer>();
 		queue.add(index);
 		_visited[index] = true;
@@ -52,7 +56,7 @@ public class a5탐색28_p1167트리의지름 {
 			int now_node = queue.poll();
 			for(Edge i : arr[now_node]) {
 				int e = i.e;
-				int v = i.value;
+				int v = i.v;
 				if(!_visited[e]) {
 					_visited[e] = true;
 					queue.add(e);
@@ -60,16 +64,16 @@ public class a5탐색28_p1167트리의지름 {
 				}
 			}
 		}
-		
 	}
 
 	static class Edge{
 		int e;
-		int value;
-		public Edge(int e, int value) {
-			this.e =e;
-			this.value = value;
+		int v;
+		public Edge(int e, int v){
+			this.e = e;
+			this.v = v;
 		}
-		
 	}
+
+	
 }
