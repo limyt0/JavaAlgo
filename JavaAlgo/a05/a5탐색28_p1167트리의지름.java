@@ -5,75 +5,79 @@ import java.util.*;
 
 public class a5탐색28_p1167트리의지름 {
 
-	static int n;
+	static int v;
 	static ArrayList<Edge>[] arr;
-	static boolean _visited[];
-	static int _distance[];
+	static boolean[] visited;
+	static int[] distance;
+	public static void main(String[] args) throws IOException   {
 	
-	public static void main(String[] args) throws IOException {
-		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		n = Integer.parseInt(st.nextToken());
-		arr = new ArrayList[n+1];
-		for(int i =1;i<=n;i++) {
+		v = Integer.parseInt(st.nextToken());
+		
+		arr = new ArrayList[v+1];
+		visited = new boolean[v+1];
+		distance = new int[v+1];
+		
+		for(int i =1;i<=v;i++) {
 			arr[i] = new ArrayList<Edge>();
 		}
-		for(int i =0;i<n;i++) {
+		
+		for(int i=0;i<v;i++) {
 			st = new StringTokenizer(br.readLine());
-			int S = Integer.parseInt(st.nextToken());
+			int s = Integer.parseInt(st.nextToken());
 			while(true) {
-				int E = Integer.parseInt(st.nextToken());
-				if(E ==-1) break;
-				int V = Integer.parseInt(st.nextToken());
-				arr[S].add(new Edge(E, V));
+				int e = Integer.parseInt(st.nextToken());
+				if(e == -1) {
+					break;
+				}
+				int dist = Integer.parseInt(st.nextToken());
+				arr[s].add(new Edge(e, dist));
 			}
 		}
 		
-		_distance = new int[n+1];
-		_visited = new boolean[n+1];
-		BFS(1);
+		bfs(1);
 		
-		int Max = 1;
-		for(int i =2; i<= n;i++) {
-			if(_distance[Max] < _distance[i]) {
-				Max = i;
+		int max = 1;
+		for(int i = 2;i<=v;i++) {
+			if(distance[max] < distance[i]) {
+				max = i;
 			}
 		}
-		_distance = new int[n+1];
-		_visited = new boolean[n+1];
-		BFS(Max);
-		Arrays.sort(_distance);
-		System.out.println(_distance[n]);
+		visited = new boolean[v+1];
+	    distance = new int[v+1];
+		bfs(max);
+		Arrays.sort(distance);
 		
-		
+		System.out.println(distance[v]);
 	}
 	
-	private static void BFS(int index) {
+	private static void bfs(int num) {
 		Queue<Integer> queue = new LinkedList<Integer>();
-		queue.add(index);
-		_visited[index] = true;
+		visited[num] = true;
+		queue.add(num);
 		while(!queue.isEmpty()) {
-			int now_node = queue.poll();
-			for(Edge i : arr[now_node]) {
-				int e = i.e;
-				int v = i.v;
-				if(!_visited[e]) {
-					_visited[e] = true;
+			int now = queue.poll();
+			for(int i = 0; i < arr[now].size();i++) {
+				int e = arr[now].get(i).e;
+				int dist = arr[now].get(i).dist;
+				if(!visited[e]) {
+					visited[e] = true;
 					queue.add(e);
-					_distance[e] = _distance[now_node]+v; 
+					distance[e] = distance[now]+ dist;
 				}
 			}
 		}
+		
 	}
 
-	static class Edge{
+	static class Edge {
 		int e;
-		int v;
-		public Edge(int e, int v){
+		int dist;
+		public Edge(int e, int dist) {
 			this.e = e;
-			this.v = v;
+			this.dist = dist;
 		}
 	}
-
 	
 }

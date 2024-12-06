@@ -5,34 +5,43 @@ import java.util.*;
 
 public class a5탐색30_p2343기타레슨 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int _n = Integer.parseInt(st.nextToken());
-		int _m = Integer.parseInt(st.nextToken());
+		StringTokenizer st = new  StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
 		st = new StringTokenizer(br.readLine());
-		int[] _a = new int[_n];
+		int[] arr = new int[n];
+		
 		int start = 0;
 		int end = 0;
-		for(int i =0;i<_n;i++) {
-			_a[i] = Integer.parseInt(st.nextToken());
-			if(start <_a[i]) start = _a[i];
-			end = end + _a[i];
+		
+		for(int i = 0;i<n;i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
+			if(start < arr[i]) start = arr[i];
+			end = end + arr[i];
 		}
+		
 		while(start <= end) {
-			int mid = (start+end) /2;
+			int middle = (start+end)/2;
 			int sum = 0;
-			int count = 0;
-			for(int i=0;i<_n;i++) {
-				if(sum + _a[i] > mid) {
-					count++;
+			int cnt = 0;
+			for(int i=0;i<n;i++) {
+				if(sum + arr[i] > middle) {
+					cnt++;
 					sum = 0;
 				}
-				sum = sum + _a[i];
+				sum = sum + arr[i];
+				
 			}
-			if(sum !=0) count++;
-			if(count > _m) start = mid+1;
-			else end = mid -1;
+			if(sum !=0) {
+				cnt++;
+			}
+			if(cnt > m ) {
+				start = middle +1;
+			}else {
+				end = middle - 1;
+			}
 		}
 		System.out.println(start);
 	}
