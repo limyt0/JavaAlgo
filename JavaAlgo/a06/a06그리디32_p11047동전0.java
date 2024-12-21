@@ -17,7 +17,7 @@ public class a06그리디32_p11047동전0 {
 		}
 		int cnt = 0;
 		for(int i=n-1;i>=0;i--) {
-			if(k > coin[i]) {
+			if(k >= coin[i]) {
 				int mok = k / coin[i];
 				int nam = k % coin[i];
 				cnt += mok;
