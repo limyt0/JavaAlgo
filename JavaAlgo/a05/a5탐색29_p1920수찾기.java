@@ -9,43 +9,27 @@ public class a5탐색29_p1920수찾기 {
 	public static void main(String[] args) throws IOException  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		
 		int n = Integer.parseInt(st.nextToken());
 		st = new StringTokenizer(br.readLine());
-		int[] arr = new int[n];
-		for(int i = 0;i<n;i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
-		}
-		
-		Arrays.sort(arr);
-		
-		st = new StringTokenizer(br.readLine());
-		int m = Integer.parseInt(st.nextToken());
-		st = new StringTokenizer(br.readLine());
-		
+		int k = Integer.parseInt(st.nextToken());
 		
 
-		for(int i = 0;i<m;i++) {
-			int num = Integer.parseInt(st.nextToken());
-			int result = 0;
-			
-			int s = 0;
-			int e = arr.length -1;
-			
-			while(s <=e) {
-				int mid = (s + e)/2;
-				int midVal = arr[mid];
-				if(midVal < num) {
-					s = mid+1;
-				}else if(midVal > num) {
-					e = mid-1;
-				}else {
-					result = 1;
-					break;
-				}
+		long start = 1;
+		long end = k;
+		long ans = 0;
+		while(start<=end) {
+			long cnt = 0;
+			long mid = (start+end)/2;
+			for(int i = 1;i<=n;i++) {
+				cnt += Math.min(mid /i, n);
 			}
-			
-			System.out.println(result);
+			if(cnt < k) {
+				start = mid +1;
+			}else {
+				ans = mid;
+				end = mid -1;
+			}
 		}
+		System.out.println(ans);
 	}
 }
