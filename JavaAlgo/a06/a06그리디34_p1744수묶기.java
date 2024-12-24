@@ -6,50 +6,46 @@ import java.util.*;
 public class a06그리디34_p1744수묶기 {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int _n = Integer.parseInt(st.nextToken());
-		PriorityQueue<Integer> plusPq = new PriorityQueue<>();
-		PriorityQueue<Integer> minusPq = new PriorityQueue<>();
-		int one = 0;
-		int zero = 0;
-		for(int i = 0; i<_n;i++) {
+		int n = Integer.parseInt(st.nextToken());
+		PriorityQueue<Integer> pqPlus = new PriorityQueue<Integer>(Collections.reverseOrder());
+		PriorityQueue<Integer> pqMinus = new PriorityQueue<Integer>();
+		for(int i =0;i<n;i++) {
 			st = new StringTokenizer(br.readLine());
-			int data = Integer.parseInt(st.nextToken());
-			if(data >1 ) {
-				plusPq.add(data);
-			}else if(data == 1) {
-				one++;
-			} else if(data == 0 ) {
-				zero++;
-			} else {
-				minusPq.add(data);
+			int num = Integer.parseInt(st.nextToken());
+			if(num >0) {
+				pqPlus.add(num);
+			}else {
+				pqMinus.add(num);
 			}
 		}
 		int sum = 0;
+		while(pqMinus.size()>1) {
+			int data1 = pqMinus.remove();
+			int data2 = pqMinus.remove();
+			sum += (data1 *data2);
+		}
 		
-		while(plusPq.size()>1) {
-			int first = plusPq.remove();
-			int second = plusPq.remove();
-			sum = sum + first * second;
-		}
-		if(!plusPq.isEmpty()) {
-			sum = sum+plusPq.remove();
-		}
-		while(minusPq.size()>1) {
-			int first = minusPq.remove();
-			int second = minusPq.remove();
-			sum = sum + first * second;
-		}
-		if(!minusPq.isEmpty()) {
-			if(zero == 0) {
-				sum = sum + minusPq.remove();
+		while(pqPlus.size()>1) {
+			int data1 = pqPlus.remove();
+			int data2 = pqPlus.remove();
+			if(data2 != 1) {
+				sum += (data1 * data2);
+			}else {
+				sum += (data1 + data2);
 			}
 		}
 		
-		sum = sum + one;
-		System.out.println(sum);
+		if(pqMinus.size() ==1) {
+			sum += pqMinus.remove();
+		}
 		
+		if(pqPlus.size() == 1) {
+			sum += pqPlus.remove();
+		}
+		
+		System.out.println(sum);
 	}
 
 }
