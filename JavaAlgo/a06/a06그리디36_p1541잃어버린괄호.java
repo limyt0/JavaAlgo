@@ -4,31 +4,32 @@ import java.io.*;
 import java.util.*;
 
 public class a06그리디36_p1541잃어버린괄호 {
-	static int answer = 0;
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String example = sc.nextLine();
-		String[] str = example.split("-");
+		String st = sc.nextLine();
+		String[] str = st.split("-");
+		int sum = 0;
 		for(int i = 0;i<str.length;i++) {
-			int tmp = mySum(str[i]);
-			if(i==0) {
-				answer = answer + tmp;
+			if(i == 0) {
+				sum += StringToVal(str[i]);
 			}else {
-				answer = answer - tmp;
+				sum -= StringToVal(str[i]);
 			}
 		}
-		System.out.println(answer);
-		
-		
+		System.out.println(sum);
 	}
 
-	private static int mySum(String a) {
-		int sum = 0;
-		String tmp[] = a.split("[+]");
-		for(int i = 0;i<tmp.length; i++) {
-			sum += Integer.parseInt(tmp[i]);
+	private static int StringToVal(String str) {
+		String[] val = str.split("[+]");
+		int psum = 0;
+		for(int i = 0;i<val.length;i++) {
+			int num = Integer.parseInt(val[i]);
+			psum += num;
 		}
-		return sum;
+		return psum;
 	}
+
+	
 
 }
