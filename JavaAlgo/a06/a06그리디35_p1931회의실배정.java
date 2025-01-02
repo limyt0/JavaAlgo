@@ -25,16 +25,15 @@ public class a06그리디35_p1931회의실배정 {
 				return o1[1] - o2[1];
 			}
 		});
-		int cnt = 0;
-		int last = -1;
-		for(int i=0; i<n;i++) {
-			if(last <= arr[i][0]) {
-				last = arr[i][1];
+		int cnt =0;
+		int end = -1;
+		for(int i=0;i<n;i++) {
+			if(arr[i][0] >= end ) {
+				end = arr[i][1];
 				cnt++;
-			} 
+			}
 		}
 		System.out.println(cnt);
-		
 	}
 
 }
