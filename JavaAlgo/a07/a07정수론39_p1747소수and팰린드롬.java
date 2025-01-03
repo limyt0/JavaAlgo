@@ -7,44 +7,60 @@ import java.util.*;
 public class a07정수론39_p1747소수and팰린드롬 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int _n = sc.nextInt();
-		int _a[] = new int[10000001];
-		for(int i =2;i<_a.length;i++) {
-			_a[i]= i;
+		int n = sc.nextInt();
+		int num = n;
+		
+		boolean sosu[] = new boolean[10000001];
+		for(int i = 2; i<sosu.length;i++) {
+			sosu[i] = true;			
 		}
-		for(int i =2; i<=Math.sqrt(_a.length) ;i++) {
-			if(_a[i] == 0) {
+		
+		for(int start = 2; start*start<sosu.length;start++) {
+			if(!sosu[start]) {
 				continue;
 			}
-			for(int j =i+i;j<_a.length;j=j+i) {
-				_a[j] = 0;
-			}
-		}
-		int i = _n;
-		while(true) {
-			if(_a[i]!=0) {
-				int result = _a[i];
-				if(isPalindrome(result)) {
-					System.out.println(result);
-					break;
+			
+			for(int i = start+start; i<sosu.length;i+=start) {
+				if(sosu[i]) {
+					sosu[i] = false;
 				}
 			}
-			i++;
 		}
+		
+		for(int i = n;i<sosu.length;i++) {
+			if(!sosu[i]) {
+				continue;
+			}
+			if(isP(i)) {
+				num = i;
+				break;
+			}
+		}
+		
+		
+		System.out.println(num);
 	}
 
-	private static boolean isPalindrome(int target) {
-		char tmp[] = String.valueOf(target).toCharArray();
-		int s= 0;
-		int e = tmp.length - 1;
-		while(s<e) {
-			if(tmp[s] != tmp [e]) {
-				return false;
-			}
-			s++;
-			e--;
+	private static boolean isP(int num) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		//Queue<Integer> queue = new LinkedList<Integer>();
+		while(num != 0 ) {
+			list.add(num % 10);//1자리부터 들어감.
+			num /=  10;
 		}
-		return true;
+		int last = list.size()-1;
+		boolean result = true;
+		for(int i =0;i<list.size();i++) {
+			if(list.get(i) != list.get(last - i) ) {
+				result = false;
+				break;
+			}
+		}
+		return result;
 	}
+	
+	
+
+	
 
 }
