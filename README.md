@@ -87,7 +87,49 @@
 
 46. 특정 거리의 도시 찾기: https://www.acmicpc.net/problem/18352
 
+47. 효율적인 해킹: https://www.acmicpc.net/problem/1325
+
+48. 이분 그래프: https://www.acmicpc.net/problem/1707
+
+49. 물의 양 구하기: https://www.acmicpc.net/problem/2251
+
+50. 집합의 표현: https://www.acmicpc.net/problem/1717
+
+51. 여행 가자: https://www.acmicpc.net/problem/1976
+
+52. 거짓말: https://www.acmicpc.net/problem/1043
+
+53. 줄 세우기: https://www.acmicpc.net/problem/2252
+
+54. 게임 개발: https://www.acmicpc.net/problem/1516
+
+55. 임계 경로: https://www.acmicpc.net/problem/1948
+
+56. 최단 경로: https://www.acmicpc.net/problem/1753
+
+57. 최소비용 구하기: https://www.acmicpc.net/problem/1916
+
+58. K번째 최단 경로 찾기: https://www.acmicpc.net/problem/1854
+
+59. 타임머신: https://www.acmicpc.net/problem/11657
+
+60. 오민식의 고민: https://www.acmicpc.net/problem/1219
+
+61. 플로이드: https://www.acmicpc.net/problem/11404
+
+62. 경로 찾기: https://www.acmicpc.net/problem/11403
+
+63. 케빈 베이컨의 6단계 법칙: https://www.acmicpc.net/problem/1389
+
+64. 최소 스패닝 트리: https://www.acmicpc.net/problem/1197
+
+65. 다리 만들기 2 : https://www.acmicpc.net/problem/17472
+
+66. 불우이웃 돕기: https://www.acmicpc.net/problem/1414
+
 ## 09 트리
+
+67. 트리의 부모 찾기: https://www.acmicpc.net/problem/11725
 
 ## 10 조합
 
