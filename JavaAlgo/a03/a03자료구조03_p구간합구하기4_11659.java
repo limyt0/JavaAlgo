@@ -3,7 +3,7 @@ package a03;
 import java.io.*;
 import java.util.*;
 
-public class a03자료구조03구간합구하기4_11659 {
+public class a03자료구조03_p구간합구하기4_11659 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
