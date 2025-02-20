@@ -1,4 +1,4 @@
-# CsharpAlgo
+# Algo
 
 ## 01 알고리즘 풀기
 00. 수 정렬하기 : https://www.acmicpc.net/problem/2750
@@ -170,8 +170,76 @@
 ### 09-1 트리 알아보기
 67. 트리의 부모 찾기: https://www.acmicpc.net/problem/11725
 
+68. 트리: https://www.acmicpc.net/problem/1068
+
+### 09-2 트라이
+
+69. 문자열 집합: https://www.acmicpc.net/problem/14425
+
+### 09-3 이진 트리
+70. 트리 순회: https://www.acmicpc.net/problem/1991
+
+### 09-4 세그먼트 트리
+71. 구간 합 구하기: https://www.acmicpc.net/problem/2042
+
+72. 최솟값: https://www.acmicpc.net/problem/10868
+
+73. 구간 곱 구하기: https://www.acmicpc.net/problem/11505
+
+### 09-5 최소 공통 조상
+74. LCA: https://www.acmicpc.net/problem/11437
+
+75. LCA2: https://www.acmicpc.net/problem/11438
 ## 10 조합
+76. 이항 계수 1: https://www.acmicpc.net/problem/11050
+
+77. 이항 계수 2: https://www.acmicpc.net/problem/11051
+
+78. 부녀회장이 될테야: https://www.acmicpc.net/problem/2775
+
+79. 다리 놓기: https://www.acmicpc.net/problem/1010
+
+80. 조약돌 꺼내기: https://www.acmicpc.net/problem/13251
+
+81. 순열의 순서: https://www.acmicpc.net/problem/1722
+
+82.사전: https://www.acmicpc.net/problem/1256
+
+83. 선물 전달: https://www.acmicpc.net/problem/1947
 
 ## 11 동적 계획법
+84. 1로 만들기: https://www.acmicpc.net/problem/1463
+
+85. 퇴사: https://www.acmicpc.net/problem/14501
+
+86. 이친수: https://www.acmicpc.net/problem/2193
+
+87. 2xn 타일링: https://www.acmicpc.net/problem/11726
+
+88. 쉬운 계단 수: https://www.acmicpc.net/problem/10844
+
+89. 연속합2: https://www.acmicpc.net/problem/13398
+
+90. LCS 2: https://www.acmicpc.net/problem/9252
+
+91. 가장 큰 정사각형 찾기: https://www.acmicpc.net/problem/1915
+
+92. 고층 빌딩: https://www.acmicpc.net/problem/1328
+
+93. Dance Dance Revolution: https://www.acmicpc.net/problem/2342
+
+94. 행렬의 곱셈 순서: https://www.acmicpc.net/problem/11049
+
+95. 외원판 순회: https://www.acmicpc.net/problem/2098
+
+96. 가장 긴 증가하는 부분 수열 5: https://www.acmicpc.net/problem/14003
 
 ## 12 기하
+97. CCW: https://www.acmicpc.net/problem/11758
+
+
+98. 선분 교차 2: https://www.acmicpc.net/problem/17387
+
+99. 선분 그룹: https://www.acmicpc.net/problem/2162
+
+100. 다각형의 면적: https://www.acmicpc.net/problem/2166
