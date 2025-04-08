@@ -53,7 +53,6 @@ public class a08그래프64_p1197최소스패닝트리 {
 			return parent[a] = find(parent[a]);
 		}
 	}
-	
 }
 
 class pEdge implements Comparable<pEdge>{
