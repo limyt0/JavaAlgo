@@ -159,7 +159,7 @@
 
 63. 케빈 베이컨의 6단계 법칙: https://www.acmicpc.net/problem/1389
 
-### 최소 신장 트리
+### 08-7 최소 신장 트리
 64. 최소 스패닝 트리: https://www.acmicpc.net/problem/1197
 
 65. 다리 만들기 2 : https://www.acmicpc.net/problem/17472
